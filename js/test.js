@@ -35,7 +35,7 @@ console.log('***************************************');
 
 
 var x_tekstas = '2 gaideliai';
-console.log( x_tekstas );        //  x_tekstas mes duodame teksto tipo reiksme '2 gaideliai'
+console.log( x_tekstas );        //  x_tekstas mes duodame (inicijuojame) teksto tipo reiksme '2 gaideliai'
 
 var y_tekstas = '3 visteles';
 console.log( y_tekstas );        //  y_tekstas mes duodame teksto tipo reiksme '3 visteles'
@@ -59,7 +59,7 @@ console.log( antras_skaiciu_sarasas );      // "antras_skaiciu_sarasas" duota pe
 var trecias_skaiciu_sarasas = [5, 1, -2, 3, -4];
 console.log( trecias_skaiciu_sarasas );     // "trecias_skaiciu_sarasas" duota penkiu skaitmenu reiksme 5, 1, -2, 3, -4
 
-// skaiciai visuomet uzdaromi [ ] o tekstas''
+// sarasas visuomet uzdaromi [ ] o tekstas''
  
 console.log('***************************************');
 console.log('***************************************');
@@ -112,3 +112,174 @@ var ilgas_tekstas = trecias_tekstu_sarasas[0] + ', '            // sis textas "t
                         + trecias_tekstu_sarasas[3] + ', '
                         + trecias_tekstu_sarasas[4];
 console.log( ilgas_tekstas );
+
+console.log('***************************************');
+console.log('***************************************');
+console.log('***************************************');
+console.log('***************************************');
+
+console.log('***************************************');
+
+// a > b
+// >, <, >=, <=, ===, !==
+
+// if ( a ? b ) { true } else { false }
+                                                        //   
+if ( 2 > 4 ) {                                          // Cia yra pavaizduoti   if ( a ? b ) { true } else { false }
+   console.log('Du yra daugiau uz keturis.');           //   jeigu salyga yra teisinga jis meta i console teksta 
+} else {                                                //   kuri as jam aprasiau
+    console.log('Du yra NERA daugiau uz keturis.');     // 
+}                                                       //
+                                                        //  
+if ( 2 > 4 ) {                                          //    
+    console.log('Du yra daugiau uz keturis.');          //
+}                                                       //
+                                                        //   
+if ( 2 < 4 ) {                                          //
+    console.log('Du yra NERA daugiau uz keturis.');     //
+}                                                       //
+                                                        // 
+if ( 2 === 4 ) {                                        //  
+    console.log('Du yra lygu keturi.');                 //
+}                                                       //
+
+
+// Apskaičiuoti vertę iš sąrašų kurių verčių tipas yra skaičiai, pagal pateiktą logiką
+// 1-2+3-4+5
+ 
+var skaiciu_suma = trecias_skaiciu_sarasas[0] +           
+                    + trecias_skaiciu_sarasas[1] +       
+                    + trecias_skaiciu_sarasas[2] +      
+                    + trecias_skaiciu_sarasas[3] + 
+                    + trecias_skaiciu_sarasas[4];
+   console.log (skaiciu_suma)
+
+   //virsuje buves skaiciu sarasas kury as paemiau ir susumavau aprases ka reikia daryti tam sarasui 
+   //ivardines visas skaiciu saraso pozicijas kurios dalyvauja [0] + [1] + [2] + [3] + [4] 
+
+   var a = 2;
+
+   if ( a < 0 ) {
+       console.log( 'Kintamasis a yra maziau uz nuli' );
+   } else if ( a < 5 ) {
+       console.log( 'Kintamasis a nera maziau uz nuli, bet yra maziau uz 5' );
+   } else {
+       console.log( 'Kintamasis a nera maziau uz nuli' );
+   }
+   //  kintamuju lyginimas ir reiksmes  kuria mes aprasom parasymas i console 
+    
+var s = 55;
+
+
+    if ( s < 20 ) {
+        console.log ( 'Kintamas s yra maziau uz dvidesim' );
+    } else if ( s < 100 ) {
+        console.log ( 'Kintamasis s nėra maziau uz dvidešim, bet yra maziau uz šimtą')
+    } else {
+        console.log ('Kintamasis nera maziau uz dvidesim')
+    }
+    // var o = 55
+
+    // if ( o > 20 + 45) {
+    //     console.log ( 'kintamasis yra daugiau uz kaireje parasytu skaiciu suma ');
+    // } else {
+    //     console.log ( 'kintamasis nesamone');
+    // }
+
+   console.log ( '***************************************');
+   
+   var m = 5;
+   var n = '5';
+   
+   if ( m != n ) {
+       console.log('lengvas - ne');
+   } else {
+       console.log('lengvas - taip');
+   }
+   
+   if ( m !== n ) {
+       console.log('grieztas - ne');
+   } else {
+       console.log('grieztas - taip');
+   }
+//  lyginimas lengvas ir grieztas lengvas palyginimas gali rasti ir tekste skaitine reiksme o grieztas palyginimas
+// konkreciai lygina ar tai skaitine reiksme != tai yra lengvas teiginys kad nelygu !== tai yra grieztas teiginys 
+// kad nelygu == tai yra lengvas teiginys kad lygu === tai yra grieztas teiginys kad lygu
+
+   var k = 8;
+   var l = '8';
+
+   if ( k == l) {
+       console.log ('lengvas-TAIP')
+   } else {
+       console.log ('lengvas-NE')
+   }
+
+   if ( k === l ) {
+       console.log ('grieztas-TAIP')
+   } else {
+       console.log ('grieztas-NE')
+   }
+
+   console.log('****************************');
+   console.log('****************************');
+   console.log('****************************');
+  console.log('FOR ciklas');
+
+// suma nuo 0 iki 4 = 10
+
+var suma = 0;
+var skaiciai = [0,1,2,3,4];
+
+// console.log(skaiciai);
+// console.log('ilgis: ' + skaiciai.length );
+
+
+for ( var i=0; i<skaiciai.length ; i++ ) {
+                                                        // suma = suma + skaiciai[i];
+    suma += skaiciai[i];
+
+    
+}
+                                                            // 0 - 0
+                                                            // 1 - 1
+                                                            // 2 - 3
+                                                            // 3 - 6
+                                                            // 4 - 10
+
+console.log( 'suma: ' + suma );
+
+
+
+
+// // var suma_2 = 0;
+// // var skaiciai_2 = [0,1,2,3,4];
+
+// // for ( var i=25; i<30; i++ ) {
+// //     suma_2 += skaiciai_2[i-25];
+// //     console.log( i + ' - ' + suma_2 );
+// // }
+// // console.log( 'suma_2: ' + suma_2 );
+ 
+
+
+var p = 5
+var suma = 3
+var skaitmenys = [0,1,2,3,4,5,p];
+
+for ( var i=0; i<skaitmenys.length  ; i++ ) {
+    suma += skaitmenys[i];
+}
+console.log( 'suma: ' + suma );
+
+
+//visiem kintamiesiem davem reiksmes "var p = 5 " ir taip toliau   
+
+
+// toliau aprasem veiksmu (sumavimo) seka           "for ( var i=0; i<skaitmenys.length  ; i++ ) {
+//                                            suma += skaitmenys[i];"
+
+// ir galiausiai aprasem kaip tai turi buti aprasyta console'je 
+
+
+//                                                 console.log( 'suma: ' + suma );
